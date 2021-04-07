@@ -11,8 +11,15 @@ body {
 .sidebar {
  height: 100%;
  width: fit-content;
- background: black;
- justify-content: center;
+ justify-content: flex-start;
+ background-image: linear-gradient(
+  to right,
+  #111212,
+  #131515,
+  #161717,
+  #181a18,
+  #1b1c1a
+ );
 }
 
 .sidebarNavlink {
@@ -23,10 +30,15 @@ body {
 }
 
 .nav-pills > a.nav-link.active {
- background-color: hsl(141, 75%, 48%);
+ background-color: hsl(159, 97%, 37%);
  color: black;
 }
 
 .sidebarNavlink:hover {
  color: white;
+}
+.photo {
+ width: 10rem;
+ border-radius: 50%;
+ margin: 1rem 0;
 }

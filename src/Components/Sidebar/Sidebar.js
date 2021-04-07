@@ -1,13 +1,14 @@
 import React from 'react';
-import { Nav } from 'react-bootstrap';
+import { Nav, Image } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 import { SidedbarData } from './SidedbarData';
-import '../App.css';
+import '../../App.css';
 
 export default function Sidebar() {
  return (
   <Nav variant="pills" className="sidebar flex-column">
+   <Image src="/photo.jpg" className="photo" />
    {SidedbarData.map((navItem, i) => {
     return (
      <Nav.Link
