@@ -1,6 +1,13 @@
+* {
+ font-family: 'Roboto', sans-serif;
+ letter-spacing: 1px;
+}
 .App {
  width: 100vw;
  height: 100vh;
+ background-image: url(./background.jpg);
+ background-repeat: no-repeat;
+ display: flex;
 }
 
 body {
@@ -9,9 +16,11 @@ body {
 }
 
 .sidebar {
- height: 100%;
+ height: 85%;
+ align-self: center;
  width: fit-content;
  justify-content: flex-start;
+ margin-left: 3rem;
  background-image: linear-gradient(
   to right,
   #111212,
@@ -24,14 +33,20 @@ body {
 
 .sidebarNavlink {
  color: darkgray;
- margin: 0.5rem;
+ text-align: center;
+ margin: 10px;
  text-decoration: none;
+
  transition: 500ms;
 }
 
 .nav-pills > a.nav-link.active {
  background-color: hsl(159, 97%, 37%);
  color: black;
+ /* transform: perspective(1px) scale(1.2); */
+ -webkit-font-smoothing: subpixel-antialiased;
+ transform: scale(1.2);
+ box-shadow: 0px 6px 9px 3px #000000;
 }
 
 .sidebarNavlink:hover {
@@ -41,4 +56,5 @@ body {
  width: 10rem;
  border-radius: 50%;
  margin: 1rem 0;
+ box-shadow: 0px 6px 9px 3px #000000;
 }
