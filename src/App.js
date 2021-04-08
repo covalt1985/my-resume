@@ -30,6 +30,9 @@ export default class App extends Component {
      {SidedbarData.map(el => {
       return <Route exact path={el.link} component={el.component} />;
      })}
+     <Route exact path="/">
+      <Redirect to="/about-me" />
+     </Route>
     </Switch>
    </div>
   );

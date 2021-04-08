@@ -1,11 +1,36 @@
 import React, { Component } from 'react';
 
-export const Skills = class Skills extends Component {
+import BioCard from '../BioCard/index';
+import './style.css';
+
+export default class Skills extends Component {
+ static defaultProps = {
+  cardTitle: 'Umiejętności',
+  cardText: `Some quick example text to build on the card title and make up the bulk of
+              the card's content.Some quick example text to build on the card title and make up the bulk of
+              the card's content.Some quick example text to build on the card title and make up the bulk of
+              the card's content.Some quick example text to build on the card title and make up the bulk of
+              the card's content.Some quick example text to build on the card title and make up the bulk of
+              the card's content.Some quick example text to build on the card title and make up the bulk of
+              the card's content.Some quick example text to build on the card title and make up the bulk of
+              the card's content.Some quick example text to build on the card title and make up the bulk of
+              the card's content.Some quick example text to build on the card title and make up the bulk of
+              the card's content.Some quick example text to build on the card title and make up the bulk of
+              the card's content.Some quick example text to build on the card title and make up the bulk of
+              the card's content.Some quick example text to build on the card title and make up the bulk of
+              the card's content.Some quick example text to build on the card title and make up the bulk of
+              the card's content.Some quick example text to build on the card title and make up the bulk of
+              the card's content.Some quick example text to build on the card title and make up the bulk of
+              the card's content.`,
+  cardLink: 'Card Link',
+ };
  render() {
   return (
-   <div>
-    <h1 style={{ color: 'red' }}>Hello</h1>
-   </div>
+   <BioCard
+    cardTitle={this.props.cardTitle}
+    cardText={this.props.cardText}
+    cardLink={this.props.cardLink}
+   />
   );
  }
-};
+}

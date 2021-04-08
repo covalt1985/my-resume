@@ -1,41 +1,29 @@
 import React, { Component } from 'react';
+import About from './AboutMe';
+import Con from './Contact';
+import Proj from './Projects';
+import Skill from './Skills';
 
 export const AboutMe = class AboutMe extends Component {
  render() {
-  return (
-   <div>
-    <h1 style={{ color: 'red' }}>About Me</h1>
-   </div>
-  );
+  return <About />;
  }
 };
 
 export const Skills = class Skills extends Component {
  render() {
-  return (
-   <div>
-    <h1 style={{ color: 'red' }}>Skills</h1>
-   </div>
-  );
+  return <Skill />;
  }
 };
 
 export const Projects = class Projects extends Component {
  render() {
-  return (
-   <div>
-    <h1 style={{ color: 'red' }}>Projects</h1>
-   </div>
-  );
+  return <Proj />;
  }
 };
 
 export const Contact = class Contact extends Component {
  render() {
-  return (
-   <div>
-    <h1 style={{ color: 'red' }}>Contact</h1>
-   </div>
-  );
+  return <Con />;
  }
 };
