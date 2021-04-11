@@ -1,11 +1,32 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Switch, Route, Link, Redirect } from 'react-router-dom';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import { SidedbarData } from './Components/Sidebar/SidedbarData';
 import Sidebar from './Components/Sidebar/Sidebar';
 import MainPhoto from './Components/MainPhoto/index';
+
+const AnimatedSwitch = withRouter(({ location }) => (
+ <TransitionGroup style={{ display: 'flex' }}>
+  <CSSTransition
+   key={location.key}
+   classNames="slide"
+   timeout={1000}
+   unmountOnExit>
+   <Switch location={location}>
+    {SidedbarData.map(el => {
+     return (
+      <Route key={el.title} exact path={el.link} component={el.component} />
+     );
+    })}
+    <Route exact path="/">
+     <Redirect to="/about-me" />
+    </Route>
+   </Switch>
+  </CSSTransition>
+ </TransitionGroup>
+));
 
 export default class App extends Component {
  constructor(props) {
@@ -26,14 +47,7 @@ export default class App extends Component {
      changeActiveTab={this.changeActiveTab}
     />
     <MainPhoto />
-    <Switch>
-     {SidedbarData.map(el => {
-      return <Route exact path={el.link} component={el.component} />;
-     })}
-     <Route exact path="/">
-      <Redirect to="/about-me" />
-     </Route>
-    </Switch>
+    <AnimatedSwitch />
    </div>
   );
  }

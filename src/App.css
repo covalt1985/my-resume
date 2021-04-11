@@ -3,16 +3,19 @@
  letter-spacing: 1px;
 }
 .App {
- width: 100vw;
- height: 100vh;
- background-image: url(./background.jpg);
- background-repeat: no-repeat;
  display: flex;
+ width: 100%;
+ height: 100vh;
 }
 
 body {
+ width: 100vw;
+ height: 100vh;
  margin: 0;
  padding: 0;
+ background-image: url(./background.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
 }
 
 .sidebar {
@@ -21,6 +24,8 @@ body {
  width: fit-content;
  justify-content: flex-start;
  margin-left: 3rem;
+ margin-right: 5px;
+ border-radius: 0.25rem;
  background-image: linear-gradient(
   to right,
   #111212,
@@ -33,8 +38,8 @@ body {
 
 .sidebarNavlink {
  color: darkgray;
+ margin-top: 10px;
  text-align: center;
- margin: 10px;
  text-decoration: none;
  transition: 500ms;
 }
@@ -42,10 +47,13 @@ body {
 .nav-pills > a.nav-link.active {
  background-color: hsl(159, 97%, 37%);
  color: black;
- /* transform: perspective(1px) scale(1.2); */
  -webkit-font-smoothing: subpixel-antialiased;
  transform: scale(1.2);
  box-shadow: 0px 6px 9px 3px #000000;
+}
+
+.sidebar.nav {
+ flex-wrap: nowrap;
 }
 
 .sidebarNavlink:hover {

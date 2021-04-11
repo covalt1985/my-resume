@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import { Card } from 'react-bootstrap';
 
-import BioCard from '../BioCard/index';
-import './style.css';
+import '../style.css';
 
 export default class Projects extends Component {
  static defaultProps = {
@@ -26,11 +26,19 @@ export default class Projects extends Component {
  };
  render() {
   return (
-   <BioCard
-    cardTitle={this.props.cardTitle}
-    cardText={this.props.cardText}
-    cardLink={this.props.cardLink}
-   />
+   <Card className="Projects bioCard" text="white">
+    <div className="cardWrapper">
+     <Card.Body>
+      <Card.Title>{this.props.cardTitle}</Card.Title>
+      <Card.Subtitle className="mb-2 text-muted">
+       {this.props.cardSubtitle}
+      </Card.Subtitle>
+      <Card.Text>{this.props.cardText}</Card.Text>
+      <Card.Link href="#">Card Link</Card.Link>
+      <Card.Link href="#">Another Link</Card.Link>
+     </Card.Body>
+    </div>
+   </Card>
   );
  }
 }

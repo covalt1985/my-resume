@@ -6,14 +6,14 @@ import './style.css';
 class MainPhoto extends Component {
  render() {
   return (
-   <Card className="Card text-white">
-    <Card.Img src="/photo.jpg" alt="Card image" />
+   <Card className="d-none d-md-block d-lg-block Card text-white">
+    <Card.Img className="CardImage" src="/photo.jpg" alt="Card image" />
     <Card.ImgOverlay className="CardBody">
      <Row>
       <Col>
-       <Card.Text className="CardText title">TOMASZ KOWALIK</Card.Text>
+       <Card.Text className="CardText title">Tomasz Kowalik</Card.Text>
        <Card.Title className="CardText underTitle">
-        Front End Developer
+        front end developer
        </Card.Title>
       </Col>
      </Row>

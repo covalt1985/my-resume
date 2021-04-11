@@ -1,24 +1,29 @@
 import React, { Component } from 'react';
 import { Card } from 'react-bootstrap';
 
-class BioCard extends Component {
+import AboutMeText from './AboutMeText';
+import '../style.css';
+
+export default class AboutMe extends Component {
+ static defaultProps = {
+  cardTitle: 'kilka słów o mnie',
+  cardText: <AboutMeText />,
+  cardLink: '',
+ };
+
  render() {
   return (
-   <Card className="bioCard" text="white">
+   <Card className="About bioCard" text="white">
     <div className="cardWrapper">
      <Card.Body>
-      <Card.Title>{this.props.cardTitle}</Card.Title>
+      <Card.Title className="cardTitle">{this.props.cardTitle}</Card.Title>
       <Card.Subtitle className="mb-2 text-muted">
        {this.props.cardSubtitle}
       </Card.Subtitle>
       <Card.Text>{this.props.cardText}</Card.Text>
-      <Card.Link href="#">Card Link</Card.Link>
-      <Card.Link href="#">Another Link</Card.Link>
      </Card.Body>
     </div>
    </Card>
   );
  }
 }
-
-export default BioCard;

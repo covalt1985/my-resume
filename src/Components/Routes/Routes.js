@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import About from './AboutMe';
-import Con from './Contact';
-import Proj from './Projects';
-import Skill from './Skills';
+import About from './AboutMe/AboutMe';
+import Con from './Contact/Contact';
+import Proj from './Projects/Projects';
+import Skill from './Skills/Skills';
 
 export const AboutMe = class AboutMe extends Component {
  render() {

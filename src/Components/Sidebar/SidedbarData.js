@@ -1,11 +1,7 @@
 import React from 'react';
 import { GoPerson } from 'react-icons/go';
 import { GiSkills } from 'react-icons/gi';
-import {
- FaProjectDiagram,
- FaCloudDownloadAlt,
- FaPhoneAlt,
-} from 'react-icons/fa';
+import { FaProjectDiagram, FaPhoneAlt } from 'react-icons/fa';
 
 import { AboutMe, Skills, Projects, Contact } from '../Routes/Routes';
 

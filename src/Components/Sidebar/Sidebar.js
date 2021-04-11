@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Nav, Image, Col } from 'react-bootstrap';
+import { Nav, Image } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 import { SidedbarData } from './SidedbarData';
@@ -20,10 +20,11 @@ export default class Sidebar extends Component {
     variant="pills"
     defaultActiveKey={this.props.activeTab}
     className="sidebar flex-column">
-    <Image src="/photo.jpg" className="photo" fluid />
+    <Image src="/photo.jpg" className="photo" />
     {SidedbarData.map((navItem, i) => {
      return (
       <Nav.Link
+       key={i}
        onClick={this.handleClick}
        as={NavLink}
        to={navItem.link}
