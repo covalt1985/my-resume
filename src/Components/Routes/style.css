@@ -1,14 +1,30 @@
+p span {
+ display: block;
+ margin: 15px 0;
+}
+
 .card {
  width: 35rem;
  height: 85%;
  align-self: center;
+ box-shadow: 0px 0px 8px 4px #000000;
 }
 
 .cardWrapper .cardTitle {
  font-size: 2rem;
  font-weight: 700;
- letter-spacing: 2px;
+ letter-spacing: 3px;
  margin-bottom: 2rem;
+ width: fit-content;
+ border-radius: 5px;
+ padding: 0 10px 0 10px;
+ text-shadow: 3px 3px black;
+ box-shadow: none;
+ transition: 500ms linear;
+ transition-delay: 700ms;
+}
+div.cardTitle.cardTitleLoaded {
+ box-shadow: inset 5px 10px 10px 10px hsl(159, 97%, 37%);
 }
 
 .card.bioCard,
@@ -20,6 +36,29 @@
  margin: 20px 0;
  overflow: auto;
 }
+
+/* kontakt */
+.contact {
+ color: hsl(159, 97%, 37%);
+ font-size: 1.5rem;
+ display: flex;
+ flex-direction: column;
+ margin: 0;
+}
+
+.contact > div {
+ margin-top: 0.8rem;
+}
+
+.contactMethod,
+.contactLink {
+ color: white;
+ font-size: 1rem;
+ display: inline-block;
+ margin-left: 3px;
+}
+
+/* Scrollbar styling */
 
 ::-webkit-scrollbar-track {
  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
@@ -34,6 +73,8 @@
  background-color: #000000;
  border: 2px solid #555555;
 }
+
+/* Component transition styling */
 
 .slide-enter {
  opacity: 0;

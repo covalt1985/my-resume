@@ -1,35 +1,35 @@
 import React, { Component } from 'react';
 import { Card } from 'react-bootstrap';
 
+import ProjectsText from './ProjectsText';
+import { loadClass } from '../Routes';
 import '../style.css';
 
 export default class Projects extends Component {
  static defaultProps = {
-  cardTitle: 'Moje Projekty',
-  cardText: `Some quick example text to build on the card title and make up the bulk of
-              the card's content.Some quick example text to build on the card title and make up the bulk of
-              the card's content.Some quick example text to build on the card title and make up the bulk of
-              the card's content.Some quick example text to build on the card title and make up the bulk of
-              the card's content.Some quick example text to build on the card title and make up the bulk of
-              the card's content.Some quick example text to build on the card title and make up the bulk of
-              the card's content.Some quick example text to build on the card title and make up the bulk of
-              the card's content.Some quick example text to build on the card title and make up the bulk of
-              the card's content.Some quick example text to build on the card title and make up the bulk of
-              the card's content.Some quick example text to build on the card title and make up the bulk of
-              the card's content.Some quick example text to build on the card title and make up the bulk of
-              the card's content.Some quick example text to build on the card title and make up the bulk of
-              the card's content.Some quick example text to build on the card title and make up the bulk of
-              the card's content.Some quick example text to build on the card title and make up the bulk of
-              the card's content.Some quick example text to build on the card title and make up the bulk of
-              the card's content.`,
+  cardTitle: 'projekty',
+  cardText: <ProjectsText />,
   cardLink: 'Card Link',
  };
+ constructor(props) {
+  super(props);
+  this.state = { titleClass: '' };
+ }
+
+ componentDidMount() {
+  const titleClass = loadClass();
+  setTimeout(() => {
+   this.setState({ titleClass: titleClass });
+  }, 1);
+ }
  render() {
   return (
    <Card className="Projects bioCard" text="white">
     <div className="cardWrapper">
      <Card.Body>
-      <Card.Title>{this.props.cardTitle}</Card.Title>
+      <Card.Title className={`cardTitle ${this.state.titleClass}`}>
+       {this.props.cardTitle}
+      </Card.Title>
       <Card.Subtitle className="mb-2 text-muted">
        {this.props.cardSubtitle}
       </Card.Subtitle>

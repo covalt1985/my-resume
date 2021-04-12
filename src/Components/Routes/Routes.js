@@ -4,6 +4,10 @@ import Con from './Contact/Contact';
 import Proj from './Projects/Projects';
 import Skill from './Skills/Skills';
 
+export const loadClass = () => {
+ return 'cardTitleLoaded';
+};
+
 export const AboutMe = class AboutMe extends Component {
  render() {
   return <About />;
