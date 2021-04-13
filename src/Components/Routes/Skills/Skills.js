@@ -3,13 +3,18 @@ import { Card } from 'react-bootstrap';
 
 import SkillsText from './SkillsText';
 import { loadClass } from '../Routes';
+import { knowledge } from './SkillsText';
 import '../style.css';
 
 export default class Skills extends Component {
  static defaultProps = {
   cardTitle: 'umiejętności',
-  cardSubtitle: { sub1: 'Foo', sub2: 'Bar' },
-  cardText: <SkillsText />,
+  cardSubtitle: {
+   sub1: 'poznane technologie:',
+   sub2: 'aktualnie się uczę:',
+   sub3: 'planuję się nauczyć:',
+  },
+  cardText: '',
   cardLink: 'Card Link',
  };
  constructor(props) {
@@ -34,7 +39,16 @@ export default class Skills extends Component {
       <Card.Subtitle className="mb-2 text-muted">
        {this.props.cardSubtitle.sub1}
       </Card.Subtitle>
-      <Card.Text>{this.props.cardText}</Card.Text>
+      <div className="skills">
+       {knowledge.aquired.map(el => {
+        return (
+         <Card.Text>
+          {el.icon}
+          {el.text}
+         </Card.Text>
+        );
+       })}
+      </div>
      </Card.Body>
     </div>
    </Card>

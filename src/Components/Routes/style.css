@@ -4,10 +4,15 @@ p span {
 }
 
 .card {
- width: 35rem;
  height: 85%;
  align-self: center;
  box-shadow: 0px 0px 8px 4px #000000;
+}
+
+@media only screen and (min-width: 768px) {
+ .card {
+  width: 35rem;
+ }
 }
 
 .cardWrapper .cardTitle {
@@ -34,7 +39,7 @@ div.cardTitle.cardTitleLoaded {
 
 .cardWrapper {
  margin: 20px 0;
- overflow: auto;
+ overflow: overlay;
 }
 
 /* kontakt */
@@ -55,7 +60,43 @@ div.cardTitle.cardTitleLoaded {
  color: white;
  font-size: 1rem;
  display: inline-block;
- margin-left: 3px;
+ margin: 0px 3px;
+}
+
+/* Skills */
+.skills {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: flex-end;
+}
+.skills img {
+ width: 5rem;
+ margin: 2rem;
+}
+.skills p {
+ color: #03ba7a;
+ text-shadow: 3px 3px black;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ height: 100%;
+ margin: 20px 10px 0 10px;
+}
+.reactSvg {
+ animation: mymove 6s linear infinite;
+}
+@keyframes mymove {
+ 0% {
+  transform: rotate(0deg);
+ }
+ 50% {
+  transform: rotate(180deg);
+ }
+ 100% {
+  transform: rotate(360deg);
+ }
 }
 
 /* Scrollbar styling */

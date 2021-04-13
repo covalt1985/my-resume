@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { Route, Redirect, withRouter } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
+import { Row, Col } from 'react-bootstrap';
 
 import { SidedbarData } from './Components/Sidebar/SidedbarData';
 import Sidebar from './Components/Sidebar/Sidebar';
@@ -45,13 +46,15 @@ export default class App extends Component {
 
  render() {
   return (
-   <div className="App" ref={this.wrapper}>
-    <Sidebar
-     activeTab={this.state.activeTab}
-     changeActiveTab={this.changeActiveTab}
-    />
-    <MainPhoto />
-    <AnimatedSwitch />
+   <div className="App container" ref={this.wrapper}>
+    <Row className="wrap">
+     <Sidebar
+      activeTab={this.state.activeTab}
+      changeActiveTab={this.changeActiveTab}
+     />
+     <MainPhoto />
+     <AnimatedSwitch />
+    </Row>
    </div>
   );
  }

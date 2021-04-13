@@ -15,20 +15,17 @@ export default class Sidebar extends Component {
  handleClick(e) {
   this.props.changeActiveTab(e.target.dataset.rbEventKey);
  }
- handleKeyPress(e) {
-  console.log(e);
- }
+
  render() {
   return (
    <Nav
     variant="pills"
     defaultActiveKey={this.props.activeTab}
     className="sidebar flex-column">
-    <Image src="/photo.jpg" className="photo" />
+    <Image src="/TK.svg" className="photo" />
     {SidedbarData.map((navItem, i) => {
      return (
       <Nav.Link
-       onKeyPress={this.handleKeyPress}
        key={i}
        onClick={this.handleClick}
        as={NavLink}

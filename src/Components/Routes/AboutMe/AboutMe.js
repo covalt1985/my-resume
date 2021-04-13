@@ -31,7 +31,7 @@ export default class AboutMe extends Component {
       <Card.Title className={`cardTitle ${this.state.titleClass}`}>
        {this.props.cardTitle}
       </Card.Title>
-      <Card.Subtitle className="mb-2 text-muted">
+      <Card.Subtitle className="text-muted">
        {this.props.cardSubtitle}
       </Card.Subtitle>
       <Card.Text>{this.props.cardText}</Card.Text>
