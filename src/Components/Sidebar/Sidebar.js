@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Nav, Image } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
-//data for sidebar is imported from SidebarData
+//sidebar tabs data goes from here
 import { SidedbarData } from './SidedbarData';
 import '../../App.css';
 

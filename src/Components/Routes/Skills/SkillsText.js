@@ -10,6 +10,10 @@ import reactBootstrap from './icons/reactbootstrap.svg';
 import hook from './icons/hook.svg';
 import next from './icons/nextjs.svg';
 import webpack from './icons/webpack.svg';
+import redux from './icons/redux.svg';
+import gatsby from './icons/gatsby.svg';
+import nodejs from './icons/nodejs.svg';
+import advance from './icons/advance.svg';
 
 export const knowledge = {
  aquired: [
@@ -17,7 +21,11 @@ export const knowledge = {
   { icon: <img src={css} alt="css" />, text: 'CSS 3' },
   { icon: <img src={es6} alt="es6" />, text: 'ES 6' },
   {
-   icon: <img src={react} className="reactSvg" alt="react" />,
+   icon: (
+    <span className="reactSvg">
+     <img src={react} alt="context" />
+    </span>
+   ),
    text: 'React JS',
   },
   {
@@ -33,15 +41,24 @@ export const knowledge = {
  ],
  learning: [
   { icon: <img src={hook} alt="hook" />, text: 'React Hooks' },
-  { icon: <img src={react} alt="context" />, text: 'React contextApi' },
+  {
+   icon: (
+    <span className="reactSvg">
+     <img src={react} alt="context" />
+    </span>
+   ),
+   text: 'React contextApi',
+  },
   { icon: <img src={next} alt="nextJs" />, text: 'nextJs' },
-  { icon: <img src={webpack} alt="webpack" />, text: 'webpack' },
+  { icon: <img src={webpack} alt="webpack" />, text: 'Webpack' },
  ],
  willLearn: [
-  { redux: {} },
-  { avanceGit: {} },
-  { advanceBootstrap: {} },
-  { gatsby: {} },
-  { nodejs: {} },
+  { icon: <img src={redux} alt="redux" />, text: 'Redux' },
+  { icon: <img src={gatsby} alt="gatsby" />, text: 'Gatsby' },
+  { icon: <img src={nodejs} alt="nodeJs" />, text: 'node Js' },
+  {
+   icon: <img src={advance} alt="gears" />,
+   text: 'Dalszy Rozwój Posiadanej Wiedzy',
+  },
  ],
 };

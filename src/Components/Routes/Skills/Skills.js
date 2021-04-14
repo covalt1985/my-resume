@@ -5,6 +5,7 @@ import { loadClass } from '../Routes';
 import Aquired from './Aquired';
 import Learning from './Learning';
 import '../style.css';
+import WillLearn from './WillLearn';
 
 export default class Skills extends Component {
  static defaultProps = {
@@ -42,10 +43,8 @@ export default class Skills extends Component {
       <Card.Title className={`cardTitle ${this.state.titleClass}`}>
        {this.props.cardTitle}
       </Card.Title>
-      {/* <Card.Subtitle as={Button} className="mb-2 text-muted">
-       {this.props.cardSubtitle.sub1}
-      </Card.Subtitle> */}
       <Row className="buttonRow">
+       {/* buttons */}
        <Button
         variant="outline-success"
         size="sm"
@@ -58,7 +57,10 @@ export default class Skills extends Component {
         onClick={() => this.handleClick(<Learning />)}>
         {this.props.cardSubtitle.sub2}
        </Button>
-       <Button variant="outline-success" size="sm">
+       <Button
+        variant="outline-success"
+        size="sm"
+        onClick={() => this.handleClick(<WillLearn />)}>
         {this.props.cardSubtitle.sub3}
        </Button>
       </Row>

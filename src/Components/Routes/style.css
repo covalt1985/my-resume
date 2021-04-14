@@ -1,3 +1,4 @@
+/* Card styling */
 p span {
  display: block;
  margin: 15px 0;
@@ -19,7 +20,7 @@ p span {
  font-size: 2rem;
  font-weight: 700;
  letter-spacing: 3px;
- margin-bottom: 2rem;
+ margin-bottom: 3rem;
  width: fit-content;
  border-radius: 5px;
  padding: 0 10px 0 10px;
@@ -35,6 +36,7 @@ div.cardTitle.cardTitleLoaded {
 .card.bioCard,
 ::-webkit-scrollbar-track {
  background: hsl(180, 5%, 7%);
+ animation: fadeIn 1.5s;
 }
 
 .cardWrapper {
@@ -42,7 +44,37 @@ div.cardTitle.cardTitleLoaded {
  overflow: overlay;
 }
 
-/* kontakt */
+/* about me */
+
+.aboutMeText span::before {
+ content: '';
+ display: block;
+ height: 2px;
+ background: #04b97a;
+ width: 50%;
+ border-radius: 20px;
+ margin: 15px auto;
+ animation: stretch 1s cubic-bezier(0.71, 0.31, 0, 1.63);
+}
+
+.aboutMeText span:first-child::before {
+ display: none;
+}
+
+@keyframes stretch {
+ 0% {
+  width: 0%;
+ }
+ 100% {
+  width: 50%;
+ }
+}
+
+.aboutMeText {
+ text-align: center;
+}
+
+/* contact */
 .contact {
  color: hsl(159, 97%, 37%);
  font-size: 1.5rem;
@@ -73,7 +105,18 @@ div.cardTitle.cardTitleLoaded {
 .skills img {
  width: 5rem;
  margin: 2rem;
+ animation: scaleUp 500ms linear;
 }
+
+@keyframes scaleUp {
+ 0% {
+  transform: scale(0);
+ }
+ 100% {
+  transform: scale(1);
+ }
+}
+
 .skills p {
  color: #03ba7a;
  text-shadow: 3px 3px black;
@@ -87,6 +130,7 @@ div.cardTitle.cardTitleLoaded {
 .reactSvg {
  animation: mymove 6s linear infinite;
 }
+/* svg animation */
 @keyframes mymove {
  0% {
   transform: rotate(0deg);
@@ -105,9 +149,10 @@ div.cardTitle.cardTitleLoaded {
 }
 
 .fadeIn {
- animation: fadeIn 1.5s;
+ animation: fadeIn 1s;
 }
 
+/* animation for card and icons */
 @keyframes fadeIn {
  from {
   opacity: 0;
@@ -131,21 +176,4 @@ div.cardTitle.cardTitleLoaded {
 ::-webkit-scrollbar-thumb {
  background-color: #000000;
  border: 2px solid #555555;
-}
-
-/* Component transition styling */
-
-.slide-enter {
- opacity: 0;
-}
-
-.slide-enter.slide-enter-active {
- opacity: 1;
- transition: opacity 500ms ease-out;
-}
-
-.slide-exit,
-.slide-exit-active {
- width: 0;
- height: 0;
 }

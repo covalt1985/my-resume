@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class AboutMeText extends Component {
  render() {
   return (
-   <span>
+   <span className="aboutMeText">
     <span>Witaj, miło mi że odwiedzasz moją stronę.</span>
     <span>
      Z wykształcenia i zawodu jestem diagnostą laboratoryjnym. Zdobyłem tytuł
