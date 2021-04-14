@@ -21,11 +21,7 @@ export const knowledge = {
   { icon: <img src={css} alt="css" />, text: 'CSS 3' },
   { icon: <img src={es6} alt="es6" />, text: 'ES 6' },
   {
-   icon: (
-    <span className="reactSvg">
-     <img src={react} alt="context" />
-    </span>
-   ),
+   icon: <img className="reactSvg" src={react} alt="context" />,
    text: 'React JS',
   },
   {
@@ -42,11 +38,7 @@ export const knowledge = {
  learning: [
   { icon: <img src={hook} alt="hook" />, text: 'React Hooks' },
   {
-   icon: (
-    <span className="reactSvg">
-     <img src={react} alt="context" />
-    </span>
-   ),
+   icon: <img className="reactSvg" src={react} alt="context" />,
    text: 'React contextApi',
   },
   { icon: <img src={next} alt="nextJs" />, text: 'nextJs' },

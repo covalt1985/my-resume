@@ -3,6 +3,7 @@ import { Nav, Image } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 
 //sidebar tabs data goes from here
+import Logo from './Logo';
 import { SidedbarData } from './SidedbarData';
 import '../../App.css';
 
@@ -22,7 +23,7 @@ export default class Sidebar extends Component {
     variant="pills"
     defaultActiveKey={this.props.activeTab}
     className="sidebar flex-column">
-    <Image src="/TK.svg" className="photo" />
+    <div className="photo">{Logo()}</div>
     {SidedbarData.map((navItem, i) => {
      return (
       <Nav.Link
