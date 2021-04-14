@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Route, Redirect, withRouter } from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-import { Row, Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 import { SidedbarData } from './Components/Sidebar/SidedbarData';
 import Sidebar from './Components/Sidebar/Sidebar';
@@ -11,7 +11,7 @@ import MainPhoto from './Components/MainPhoto/index';
 const AnimatedSwitch = withRouter(({ location }) => {
  const Ref = React.createRef(null);
  return (
-  <TransitionGroup style={{ display: 'flex' }}>
+  <TransitionGroup component={null}>
    <CSSTransition
     nodeRef={Ref}
     key={location.key}

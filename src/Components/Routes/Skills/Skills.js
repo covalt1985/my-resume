@@ -1,25 +1,26 @@
 import React, { Component } from 'react';
-import { Card } from 'react-bootstrap';
+import { Card, Button, Row } from 'react-bootstrap';
 
-import SkillsText from './SkillsText';
 import { loadClass } from '../Routes';
-import { knowledge } from './SkillsText';
+import Aquired from './Aquired';
+import Learning from './Learning';
 import '../style.css';
 
 export default class Skills extends Component {
  static defaultProps = {
   cardTitle: 'umiejętności',
   cardSubtitle: {
-   sub1: 'poznane technologie:',
-   sub2: 'aktualnie się uczę:',
-   sub3: 'planuję się nauczyć:',
+   sub1: 'poznane technologie',
+   sub2: 'aktualnie się uczę',
+   sub3: 'planuję się nauczyć',
   },
   cardText: '',
   cardLink: 'Card Link',
  };
  constructor(props) {
   super(props);
-  this.state = { titleClass: '' };
+  this.state = { titleClass: '', skills: '' };
+  this.handleClick = this.handleClick.bind(this);
  }
 
  componentDidMount() {
@@ -28,6 +29,11 @@ export default class Skills extends Component {
    this.setState({ titleClass: titleClass });
   }, 1);
  }
+
+ handleClick(comp) {
+  this.setState({ skills: comp });
+ }
+
  render() {
   return (
    <Card className="bioCard" text="white">
@@ -36,19 +42,28 @@ export default class Skills extends Component {
       <Card.Title className={`cardTitle ${this.state.titleClass}`}>
        {this.props.cardTitle}
       </Card.Title>
-      <Card.Subtitle className="mb-2 text-muted">
+      {/* <Card.Subtitle as={Button} className="mb-2 text-muted">
        {this.props.cardSubtitle.sub1}
-      </Card.Subtitle>
-      <div className="skills">
-       {knowledge.aquired.map(el => {
-        return (
-         <Card.Text>
-          {el.icon}
-          {el.text}
-         </Card.Text>
-        );
-       })}
-      </div>
+      </Card.Subtitle> */}
+      <Row className="buttonRow">
+       <Button
+        variant="outline-success"
+        size="sm"
+        onClick={() => this.handleClick(<Aquired />)}>
+        {this.props.cardSubtitle.sub1}
+       </Button>
+       <Button
+        variant="outline-success"
+        size="sm"
+        onClick={() => this.handleClick(<Learning />)}>
+        {this.props.cardSubtitle.sub2}
+       </Button>
+       <Button variant="outline-success" size="sm">
+        {this.props.cardSubtitle.sub3}
+       </Button>
+      </Row>
+      {/* here goes the component */}
+      {this.state.skills}
      </Card.Body>
     </div>
    </Card>
