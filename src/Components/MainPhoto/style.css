@@ -40,10 +40,8 @@
 .title {
  color: white;
  font-size: calc(1rem + 1.5vw);
- margin-bottom: 0;
 }
 
 .CardText.underTitle {
  font-size: calc(0.7rem + 0.8vw);
- margin-bottom: 2rem;
 }
