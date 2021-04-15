@@ -35,8 +35,6 @@ export default class Projects extends Component {
        {this.props.cardSubtitle}
       </Card.Subtitle>
       <Card.Text>{this.props.cardText}</Card.Text>
-      <Card.Link href="#">Card Link</Card.Link>
-      <Card.Link href="#">Another Link</Card.Link>
      </Card.Body>
     </div>
    </Card>

@@ -17,7 +17,10 @@ import advance from './icons/advance.svg';
 
 export const knowledge = {
  aquired: [
-  { icon: <img src={html} alt="html" />, text: 'HTML 5' },
+  {
+   icon: <img src={html} alt="html" />,
+   text: 'HTML 5',
+  },
   { icon: <img src={css} alt="css" />, text: 'CSS 3' },
   { icon: <img src={es6} alt="es6" />, text: 'ES 6' },
   {

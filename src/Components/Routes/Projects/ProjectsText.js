@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class ProjectsText extends Component {
  render() {
-  return <span></span>;
+  return <span> Tu niebawem będzie content </span>;
  }
 }
 

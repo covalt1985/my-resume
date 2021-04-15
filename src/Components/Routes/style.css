@@ -107,15 +107,6 @@ div.cardTitle.cardTitleLoaded {
  margin: 2rem;
 }
 
-/* @keyframes scaleUp {
- 0% {
-  transform: scale(0);
- }
- 100% {
-  transform: scale(1);
- }
-} */
-
 .skills img:hover:not(.reactSvg) {
  animation-name: shake-slow;
  animation-duration: 1s;

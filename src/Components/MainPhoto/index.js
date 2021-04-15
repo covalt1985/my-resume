@@ -12,7 +12,7 @@ class MainPhoto extends Component {
  render() {
   return (
    //hides when vw < 992px
-   <Card className="d-none d-md-none d-lg-block Card text-white">
+   <Card className="d-none d-md-none d-lg-flex Card text-white">
     <Card.Img className="CardImage" src={this.props.photo} alt="Card image" />
     <Card.ImgOverlay className="CardBody">
      <Row>

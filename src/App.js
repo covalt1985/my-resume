@@ -10,7 +10,7 @@ import MainPhoto from './Components/MainPhoto/index';
 export default class App extends Component {
  constructor(props) {
   super(props);
-  this.state = { activeTab: '' };
+  this.state = { activeTab: '', isItLoading: false };
   this.changeActiveTab = this.changeActiveTab.bind(this);
  }
 
@@ -35,7 +35,7 @@ export default class App extends Component {
          <Route key={el.title} exact path={el.link} component={el.component} />
         );
        })}
-       <Route exact path="/">
+       <Route path="/">
         <Redirect to="/about-me" />
        </Route>
       </Switch>
