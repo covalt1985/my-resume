@@ -1,0 +1,195 @@
+/* Card styling */
+p span {
+ display: block;
+ margin: 15px 0;
+}
+
+.card {
+ height: 85%;
+ align-self: center;
+ box-shadow: 0px 0px 8px 4px #000000;
+}
+
+@media only screen and (min-width: 768px) {
+ .card {
+  width: 35rem;
+ }
+}
+
+.cardWrapper .cardTitle {
+ font-size: 2rem;
+ text-align: center;
+ font-weight: 700;
+ letter-spacing: 3px;
+ margin-bottom: 3rem;
+ width: fit-content;
+ border-radius: 5px;
+ padding: 0 10px 0 10px;
+ text-shadow: 3px 3px black;
+ box-shadow: none;
+ transition: 500ms linear;
+ transition-delay: 700ms;
+}
+div.cardTitle.cardTitleLoaded {
+ box-shadow: inset 5px 10px 10px 10px hsl(159, 97%, 37%);
+ word-break: break-all;
+}
+
+.card.bioCard,
+::-webkit-scrollbar-track {
+ background: hsl(180, 5%, 7%);
+ animation: fadeIn 1.5s;
+}
+
+.cardWrapper {
+ margin: 20px 0;
+ overflow: overlay;
+}
+
+/* about me */
+
+.aboutMeText span::before {
+ content: '';
+ display: block;
+ height: 2px;
+ background: #04b97a;
+ width: 50%;
+ border-radius: 20px;
+ margin: 15px auto;
+ animation: stretch 1s cubic-bezier(0.71, 0.31, 0, 1.63);
+}
+
+.aboutMeText span:first-child::before {
+ display: none;
+}
+
+@keyframes stretch {
+ 0% {
+  width: 0%;
+ }
+ 100% {
+  width: 50%;
+ }
+}
+
+.aboutMeText {
+ text-align: center;
+}
+
+/* contact */
+.contact {
+ color: hsl(159, 97%, 37%);
+ font-size: 1.5rem;
+ display: flex;
+ flex-direction: column;
+ margin: 0;
+}
+
+.contact > div {
+ margin-top: 0.8rem;
+}
+
+.contactMethod,
+.contactLink {
+ color: white;
+ font-size: 1rem;
+ display: inline-block;
+ margin: 0px 3px;
+}
+
+/* Skills */
+.skills {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-items: flex-end;
+}
+.skills img {
+ width: 5rem;
+ margin: 2rem;
+}
+
+.skills img:hover:not(.reactSvg) {
+ animation-name: shake-slow;
+ animation-duration: 1s;
+ animation-timing-function: ease;
+}
+
+@keyframes shake-slow {
+ 0% {
+  transform: rotate(0deg);
+ }
+ 30% {
+  transform: rotate(20deg);
+ }
+ 60% {
+  transform: rotate(0deg);
+ }
+ 80% {
+  transform: rotate(10deg);
+ }
+ 100% {
+  transform: rotate(0deg);
+ }
+}
+
+.skills p {
+ color: #03ba7a;
+ text-shadow: 3px 3px black;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ height: 100%;
+ margin: 20px 10px 0 10px;
+}
+.reactSvg {
+ animation: mymove 6s linear infinite;
+}
+/* svg animation */
+@keyframes mymove {
+ 0% {
+  transform: rotate(0deg);
+ }
+ 50% {
+  transform: rotate(180deg);
+ }
+ 100% {
+  transform: rotate(360deg);
+ }
+}
+
+.buttonRow {
+ flex-wrap: nowrap;
+ justify-content: space-evenly;
+}
+
+.fadeIn {
+ animation: fadeIn 1s;
+}
+
+/* animation for card and icons */
+@keyframes fadeIn {
+ from {
+  opacity: 0;
+ }
+ to {
+  opacity: 1;
+ }
+}
+
+/* Scrollbar styling */
+
+::-webkit-scrollbar-track {
+ box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar {
+ width: 10px;
+ background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+ background-color: #000000;
+ border: 2px solid #555555;
+}
