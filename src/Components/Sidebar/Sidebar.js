@@ -18,6 +18,7 @@ export default class Sidebar extends Component {
  }
 
  render() {
+  const breakpoints = '';
   return (
    <Nav
     variant="pills"
