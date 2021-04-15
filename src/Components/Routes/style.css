@@ -17,7 +17,8 @@ p span {
 }
 
 .cardWrapper .cardTitle {
- font-size: calc(0.67rem + 1.5vw);
+ font-size: 2rem;
+ text-align: center;
  font-weight: 700;
  letter-spacing: 3px;
  margin-bottom: 3rem;
@@ -31,7 +32,7 @@ p span {
 }
 div.cardTitle.cardTitleLoaded {
  box-shadow: inset 5px 10px 10px 10px hsl(159, 97%, 37%);
- word-break: break-word;
+ word-break: break-all;
 }
 
 .card.bioCard,

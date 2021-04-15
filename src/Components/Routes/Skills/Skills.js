@@ -43,7 +43,7 @@ export default class Skills extends Component {
       <Card.Title className={`cardTitle ${this.state.titleClass}`}>
        {this.props.cardTitle}
       </Card.Title>
-      <Row className="buttonRow">
+      <Row className="buttonRow d-flex-column d-sm-flex">
        {/* buttons */}
        <Button
         variant="outline-success"
