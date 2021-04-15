@@ -30,6 +30,13 @@ p span {
  transition: 500ms linear;
  transition-delay: 700ms;
 }
+
+@media (max-width: 575.98px) {
+ .cardWrapper .cardTitle {
+  font-size: 1.4rem;
+ }
+}
+
 div.cardTitle.cardTitleLoaded {
  box-shadow: inset 5px 10px 10px 10px hsl(159, 97%, 37%);
  word-break: break-all;
