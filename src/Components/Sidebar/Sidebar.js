@@ -24,6 +24,7 @@ export default class Sidebar extends Component {
         defaultActiveKey={this.props.activeTab}
         className="sidebar flex-column">
         <div className="photo">{Logo()}</div>
+
         {SidedbarData.map((navItem, i) => {
           return (
             <Nav.Link
@@ -37,6 +38,7 @@ export default class Sidebar extends Component {
             </Nav.Link>
           );
         })}
+        
       </Nav>
     );
   }
