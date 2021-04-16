@@ -8,67 +8,67 @@ import '../style.css';
 import WillLearn from './WillLearn';
 
 export default class Skills extends Component {
- static defaultProps = {
-  cardTitle: 'umiejętności',
-  cardSubtitle: {
-   sub1: 'poznane technologie',
-   sub2: 'aktualnie się uczę',
-   sub3: 'planuję się nauczyć',
-  },
-  cardText: '',
-  cardLink: 'Card Link',
- };
- constructor(props) {
-  super(props);
-  this.state = { titleClass: '', skills: '' };
-  this.handleClick = this.handleClick.bind(this);
- }
+  static defaultProps = {
+    cardTitle: 'umiejętności',
+    cardSubtitle: {
+      sub1: 'poznane technologie',
+      sub2: 'aktualnie się uczę',
+      sub3: 'planuję się nauczyć',
+    },
+    cardText: '',
+    cardLink: 'Card Link',
+  };
+  constructor(props) {
+    super(props);
+    this.state = { titleClass: '', skills: '' };
+    this.handleClick = this.handleClick.bind(this);
+  }
 
- componentDidMount() {
-  const titleClass = loadClass();
-  setTimeout(() => {
-   this.setState({ titleClass: titleClass });
-  }, 1);
- }
+  componentDidMount() {
+    const titleClass = loadClass();
+    setTimeout(() => {
+      this.setState({ titleClass: titleClass });
+    }, 1);
+  }
 
- handleClick(comp) {
-  this.setState({ skills: comp });
- }
+  handleClick(comp) {
+    this.setState({ skills: comp });
+  }
 
- render() {
-  return (
-   <Card className="bioCard" text="white">
-    <div className="cardWrapper">
-     <Card.Body>
-      <Card.Title className={`cardTitle ${this.state.titleClass}`}>
-       {this.props.cardTitle}
-      </Card.Title>
-      <Row className="buttonRow d-flex-column d-sm-flex">
-       {/* buttons */}
-       <Button
-        variant="outline-success"
-        size="sm"
-        onClick={() => this.handleClick(<Aquired />)}>
-        {this.props.cardSubtitle.sub1}
-       </Button>
-       <Button
-        variant="outline-success"
-        size="sm"
-        onClick={() => this.handleClick(<Learning />)}>
-        {this.props.cardSubtitle.sub2}
-       </Button>
-       <Button
-        variant="outline-success"
-        size="sm"
-        onClick={() => this.handleClick(<WillLearn />)}>
-        {this.props.cardSubtitle.sub3}
-       </Button>
-      </Row>
-      {/* here goes the component */}
-      {this.state.skills}
-     </Card.Body>
-    </div>
-   </Card>
-  );
- }
+  render() {
+    return (
+      <Card className="bioCard" text="white">
+        <div className="cardWrapper">
+          <Card.Body>
+            <Card.Title className={`cardTitle ${this.state.titleClass}`}>
+              {this.props.cardTitle}
+            </Card.Title>
+            <Row className="buttonRow d-flex-column d-sm-flex">
+              {/* buttons */}
+              <Button
+                variant="outline-success"
+                size="sm"
+                onClick={() => this.handleClick(<Aquired />)}>
+                {this.props.cardSubtitle.sub1}
+              </Button>
+              <Button
+                variant="outline-success"
+                size="sm"
+                onClick={() => this.handleClick(<Learning />)}>
+                {this.props.cardSubtitle.sub2}
+              </Button>
+              <Button
+                variant="outline-success"
+                size="sm"
+                onClick={() => this.handleClick(<WillLearn />)}>
+                {this.props.cardSubtitle.sub3}
+              </Button>
+            </Row>
+            {/* here goes the component */}
+            {this.state.skills}
+          </Card.Body>
+        </div>
+      </Card>
+    );
+  }
 }
