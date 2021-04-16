@@ -11,7 +11,7 @@ class AboutMeText extends Component {
           od 5 lat.
         </span>
         <span>
-          W związku z potrezbą zmiany pracy, uczę się nowych technologii aby móc
+          W związku z potrzebą zmiany pracy, uczę się nowych technologii aby móc
           pracować jako front end developer.
         </span>
         <span>
