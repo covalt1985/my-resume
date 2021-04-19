@@ -24,7 +24,7 @@ export default class Contact extends Component {
 
   render() {
     return (
-      <Card className="Contact bioCard" text="white">
+      <Card className="Contact bioCard mainCard" text="white">
         <div className="cardWrapper">
           <Card.Body>
             <Card.Title className={`cardTitle ${this.state.titleClass}`}>

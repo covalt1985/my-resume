@@ -37,7 +37,7 @@ export default class Skills extends Component {
 
   render() {
     return (
-      <Card className="bioCard" text="white">
+      <Card className="bioCard mainCard" text="white">
         <div className="cardWrapper">
           <Card.Body>
             <Card.Title className={`cardTitle ${this.state.titleClass}`}>

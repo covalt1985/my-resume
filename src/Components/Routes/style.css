@@ -4,14 +4,14 @@ p span {
   margin: 15px 0;
 }
 
-.card {
+.mainCard {
   height: 85%;
   align-self: center;
   box-shadow: 0px 0px 8px 4px #000000;
 }
 
 @media only screen and (min-width: 768px) {
-  .card {
+  .mainCard {
     width: 35rem;
   }
 }
@@ -106,6 +106,16 @@ div.cardTitle.cardTitleLoaded {
   margin: 0px 3px;
 }
 
+/* Projects */
+
+.cardProject_container .card {
+  margin-bottom: 1rem;
+}
+
+.cardProject_container .card-header {
+  color: hsla(0, 0%, 82%, 0.8);
+  background-color: hsl(90, 3%, 10%);
+}
 /* Skills */
 .skills {
   display: flex;

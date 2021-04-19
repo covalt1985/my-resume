@@ -23,7 +23,7 @@ export default class AboutMe extends Component {
 
   render() {
     return (
-      <Card className="About bioCard" text="white">
+      <Card className="About bioCard mainCard" text="white">
         <div className="cardWrapper">
           <Card.Body>
             <Card.Title className={`cardTitle ${this.state.titleClass}`}>

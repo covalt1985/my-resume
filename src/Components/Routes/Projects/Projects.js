@@ -24,18 +24,13 @@ export default class Projects extends Component {
   }
   render() {
     return (
-      <Card className="Projects bioCard" text="white">
+      <Card className="Projects bioCard mainCard" text="white">
         <div className="cardWrapper">
           <Card.Body>
             <Card.Title className={`cardTitle ${this.state.titleClass}`}>
               {this.props.cardTitle}
             </Card.Title>
-            <Card.Subtitle className="mb-2 text-muted">
-              {this.props.cardSubtitle}
-            </Card.Subtitle>
-            <Card.Text>
-              <ProjectsText />
-            </Card.Text>
+            <ProjectsText />
           </Card.Body>
         </div>
       </Card>
