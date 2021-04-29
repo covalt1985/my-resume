@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Card, Button } from 'react-bootstrap';
 
 import '../style.css';
+import Loader from './Loader';
 
 class ProjectsText extends Component {
   render() {
@@ -77,12 +78,14 @@ class ProjectsText extends Component {
           </Card.Body>
         </Card>
         {/* Work in progress */}
-        {/* <Card border="success" bg="transparent" text="success">
+        <Card border="success" bg="transparent" text="success">
           <Card.Header>Kolejny projekt w przygotowaniu</Card.Header>
           <Card.Body>
-            <Card.Text></Card.Text>
+            <Card.Text style={{ display: 'flex', justifyContent: 'center' }}>
+              <Loader />
+            </Card.Text>
           </Card.Body>
-        </Card> */}
+        </Card>
       </div>
     );
   }
