@@ -104,6 +104,7 @@ div.cardTitle.cardTitleLoaded {
   font-size: 1rem;
   display: inline-block;
   margin: 0px 3px;
+  word-break: break-all;
 }
 
 /* Projects */

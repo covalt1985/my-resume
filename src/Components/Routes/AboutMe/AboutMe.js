@@ -7,7 +7,7 @@ import '../style.css';
 
 export default class AboutMe extends Component {
   static defaultProps = {
-    cardTitle: 'kilka słów o mnie',
+    cardTitle: 'o mnie',
   };
   constructor(props) {
     super(props);

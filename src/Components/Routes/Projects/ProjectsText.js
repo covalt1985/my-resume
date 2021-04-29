@@ -38,6 +38,31 @@ class ProjectsText extends Component {
             </Button>
           </Card.Body>
         </Card>
+
+        {/* ToDo List */}
+        <Card border="success" bg="transparent" text="success">
+          <Card.Header>ToDo List</Card.Header>
+          <Card.Body>
+            <Card.Text>
+              Klasyczna lista toDo, stworzona jako ćwiczenie z interakcją z
+              formami w react'cie
+            </Card.Text>
+            <Button
+              as={Card.Link}
+              variant="outline-success"
+              href="https://covalt1985.github.io/My-React-Excercise-ToDoList/"
+              target="blank">
+              Zobacz Projekt
+            </Button>
+          </Card.Body>
+        </Card>
+        {/* Work in progress */}
+        {/* <Card border="success" bg="transparent" text="success">
+          <Card.Header>Kolejny projekt w przygotowaniu</Card.Header>
+          <Card.Body>
+            <Card.Text></Card.Text>
+          </Card.Body>
+        </Card> */}
       </div>
     );
   }

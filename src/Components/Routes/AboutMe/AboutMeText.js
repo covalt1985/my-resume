@@ -4,7 +4,7 @@ class AboutMeText extends Component {
   render() {
     return (
       <span className="aboutMeText">
-        <span>Witaj, miło mi że odwiedzasz moją stronę.</span>
+        <span style={{ fontSize: '1.5rem' }}>Cześć !</span>
         <span>
           Z wykształcenia i zawodu jestem diagnostą laboratoryjnym. Zdobyłem
           tytuł magistra na Gdańskim Uniwersytecie Medycznym, pracuję w zawodzie
