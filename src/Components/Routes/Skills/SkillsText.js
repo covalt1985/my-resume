@@ -14,6 +14,7 @@ import redux from './icons/redux.svg';
 import gatsby from './icons/gatsby.svg';
 import nodejs from './icons/nodejs.svg';
 import advance from './icons/advance.svg';
+import sass from './icons/sass.svg';
 
 export const aquired = [
   {
@@ -47,6 +48,7 @@ export const learning = [
   { icon: <img src={webpack} alt="webpack" />, text: 'Webpack' },
 ];
 export const willLearn = [
+  { icon: <img src={sass} alt="sass" />, text: 'Sass' },
   { icon: <img src={redux} alt="redux" />, text: 'Redux' },
   { icon: <img src={gatsby} alt="gatsby" />, text: 'Gatsby' },
   { icon: <img src={nodejs} alt="nodeJs" />, text: 'node Js' },
