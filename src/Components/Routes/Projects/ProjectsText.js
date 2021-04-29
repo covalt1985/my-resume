@@ -56,6 +56,26 @@ class ProjectsText extends Component {
             </Button>
           </Card.Body>
         </Card>
+
+        {/* Weather App */}
+        <Card border="success" bg="transparent" text="success">
+          <Card.Header>Aplikacja pogodowa</Card.Header>
+          <Card.Body>
+            <Card.Text>
+              Aplikacja pogodowa, którą napisałem ucząc się JS. Napisana w
+              czystym JS, z wykorzystaniem Materialize. Wiem jakie ma problemy,
+              ale wrzucam ją, żeby była punktem odniesienia do moich postępów w
+              rozwoju :)
+            </Card.Text>
+            <Button
+              as={Card.Link}
+              variant="outline-success"
+              href="https://covalt1985.github.io/My-weatherApp/"
+              target="blank">
+              Zobacz Projekt
+            </Button>
+          </Card.Body>
+        </Card>
         {/* Work in progress */}
         {/* <Card border="success" bg="transparent" text="success">
           <Card.Header>Kolejny projekt w przygotowaniu</Card.Header>
