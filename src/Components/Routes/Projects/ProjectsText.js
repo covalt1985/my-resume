@@ -20,6 +20,26 @@ class ProjectsText extends Component {
           </Card.Body>
         </Card>
 
+        {/* Lab Calculator */}
+        <Card border="success" bg="transparent" text="success">
+          <Card.Header>Lab Calc</Card.Header>
+          <Card.Body>
+            <Card.Title>Kalkulator laboratoryjny</Card.Title>
+            <Card.Text>
+              Kieszonkowy, praktyczny kalkulator laboratoryjny. Napisany w
+              React'cie, wykorzystywany w mojej aktualnej pracy do testów
+              wyliczeniowych.
+            </Card.Text>
+            <Button
+              as={Card.Link}
+              variant="outline-success"
+              href="https://covalt1985.github.io/labcalc/"
+              target="blank">
+              Zobacz Projekt
+            </Button>
+          </Card.Body>
+        </Card>
+
         {/* Lights Out */}
         <Card border="success" bg="transparent" text="success">
           <Card.Header>Lights Out</Card.Header>
