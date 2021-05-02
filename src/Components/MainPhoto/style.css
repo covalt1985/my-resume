@@ -1,6 +1,7 @@
 .Card {
   width: 30%;
   height: 95vh;
+  margin-top: 14px;
   justify-content: center;
   background-image: linear-gradient(
     to right,
