@@ -22,7 +22,7 @@ export const aquired = [
     text: 'HTML 5',
   },
   { icon: <img src={css} alt="css" />, text: 'CSS 3' },
-  { icon: <img src={es6} alt="es6" />, text: 'ES 6' },
+  { icon: <img src={es6} alt="JS" />, text: 'JavaScript' },
   {
     icon: <img className="reactSvg" src={react} alt="context" />,
     text: 'React JS',
