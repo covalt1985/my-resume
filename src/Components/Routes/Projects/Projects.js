@@ -17,9 +17,8 @@ export default class Projects extends Component {
 
   componentDidMount() {
     //activates transition delay for cardTitle
-    const titleClass = loadClass();
     setTimeout(() => {
-      this.setState({ titleClass: titleClass });
+      this.setState({ titleClass: loadClass() });
     }, 1);
   }
   render() {

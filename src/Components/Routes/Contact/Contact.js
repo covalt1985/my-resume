@@ -16,9 +16,8 @@ export default class Contact extends Component {
   }
 
   componentDidMount() {
-    const titleClass = loadClass();
     setTimeout(() => {
-      this.setState({ titleClass: titleClass });
+      this.setState({ titleClass: loadClass() });
     }, 1);
   }
 
